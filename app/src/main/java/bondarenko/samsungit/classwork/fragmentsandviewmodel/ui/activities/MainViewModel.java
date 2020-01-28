@@ -1,4 +1,4 @@
-package bondarenko.samsungit.classwork.fragmentsandviewmodel;
+package bondarenko.samsungit.classwork.fragmentsandviewmodel.ui.activities;
 
 import android.arch.lifecycle.MutableLiveData;
 import android.arch.lifecycle.ViewModel;

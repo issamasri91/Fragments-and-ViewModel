@@ -1,12 +1,18 @@
-package bondarenko.samsungit.classwork.fragmentsandviewmodel;
+package bondarenko.samsungit.classwork.fragmentsandviewmodel.ui.activities;
 
 import android.arch.lifecycle.Observer;
 import android.arch.lifecycle.ViewModelProvider;
 import android.support.annotation.Nullable;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.TextView;
+
+import bondarenko.samsungit.classwork.fragmentsandviewmodel.ui.activities.MainViewModel;
+import bondarenko.samsungit.classwork.fragmentsandviewmodel.R;
+import bondarenko.samsungit.classwork.fragmentsandviewmodel.ui.fragments.MainFragment;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -32,6 +38,16 @@ public class MainActivity extends AppCompatActivity {
         });
 
         Log.d("Lifecycle", "onCreate");
+        addFragment();
+    }
+
+    private void addFragment(){
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+
+        MainFragment mainFragment = new MainFragment();
+        fragmentTransaction.add(R.id.mainContainer, mainFragment, "MAIN_FRAGMENT");
+        fragmentTransaction.commit();
     }
 
     private void setText(int count){
