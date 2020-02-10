@@ -27,7 +27,7 @@ public class GreenFragment extends BaseFragment {
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
-        title = "GREEN";
+        setTitle("GREEN");
     }
 
     @Override
@@ -37,4 +37,8 @@ public class GreenFragment extends BaseFragment {
         // TODO: Use the ViewModel
     }
 
+    @Override
+    public String setTitle(String title) {
+        return "GREEN";
+    }
 }
