@@ -4,6 +4,7 @@ import android.arch.lifecycle.ViewModelProviders;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -37,7 +38,28 @@ public class MainFragment extends BaseFragment {
         super.onViewCreated(view, savedInstanceState);
         viewModel = ViewModelProviders.of(this).get(MainViewModel.class);
         rvReceipe = view.findViewById(R.id.rvReceipe);
+        rvReceipe.setLayoutManager(new LinearLayoutManager(getContext()));
         List receipes = Arrays.asList(
+                new Reciepe("asfdds", "sdaf"),
+                new Reciepe("hfgd", "sdaf"),
+                new Reciepe("sagwd", "sdgas"),
+                new Reciepe("adfds", "sdfa"),
+                new Reciepe("dsfdf", "sdfsdsdf"),
+                new Reciepe("asfdds", "sdaf"),
+                new Reciepe("hfgd", "sdaf"),
+                new Reciepe("sagwd", "sdgas"),
+                new Reciepe("adfds", "sdfa"),
+                new Reciepe("dsfdf", "sdfsdsdf"),
+                new Reciepe("asfdds", "sdaf"),
+                new Reciepe("hfgd", "sdaf"),
+                new Reciepe("sagwd", "sdgas"),
+                new Reciepe("adfds", "sdfa"),
+                new Reciepe("dsfdf", "sdfsdsdf"),
+                new Reciepe("asfdds", "sdaf"),
+                new Reciepe("hfgd", "sdaf"),
+                new Reciepe("sagwd", "sdgas"),
+                new Reciepe("adfds", "sdfa"),
+                new Reciepe("dsfdf", "sdfsdsdf"),
                 new Reciepe("asfdds", "sdaf"),
                 new Reciepe("hfgd", "sdaf"),
                 new Reciepe("sagwd", "sdgas"),

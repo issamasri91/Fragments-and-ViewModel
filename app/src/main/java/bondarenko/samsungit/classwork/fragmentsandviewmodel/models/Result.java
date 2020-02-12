@@ -3,21 +3,19 @@ package bondarenko.samsungit.classwork.fragmentsandviewmodel.models;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-import java.util.List;
-
-public class Reciepe {
+public class Result {
     @SerializedName("title")
     @Expose
     private String title;
-    @SerializedName("version")
-    @Expose
-    private Double version;
     @SerializedName("href")
     @Expose
     private String href;
-    @SerializedName("results")
+    @SerializedName("ingredients")
     @Expose
-    private List<Result> results = null;
+    private String ingredients;
+    @SerializedName("thumbnail")
+    @Expose
+    private String thumbnail;
 
     public String getTitle() {
         return title;
@@ -25,14 +23,6 @@ public class Reciepe {
 
     public void setTitle(String title) {
         this.title = title;
-    }
-
-    public Double getVersion() {
-        return version;
-    }
-
-    public void setVersion(Double version) {
-        this.version = version;
     }
 
     public String getHref() {
@@ -43,11 +33,19 @@ public class Reciepe {
         this.href = href;
     }
 
-    public List<Result> getResults() {
-        return results;
+    public String getIngredients() {
+        return ingredients;
     }
 
-    public void setResults(List<Result> results) {
-        this.results = results;
+    public void setIngredients(String ingredients) {
+        this.ingredients = ingredients;
+    }
+
+    public String getThumbnail() {
+        return thumbnail;
+    }
+
+    public void setThumbnail(String thumbnail) {
+        this.thumbnail = thumbnail;
     }
 }
